@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Workers</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="container">
+  <form role="form">
+    <div class="form__parameters">
+      <div class="form-group">
+      <h3>
+        <label for="exampleInputEmail1" class="label label-info">Радиус размытия</label>
+      </h3>
+        <input type="text" class="form-control" id="radius" placeholder="Радиус размытия">
+      </div>
+      <div class="form-group">
+        <h3>
+          <label for="exampleInputPassword1" class="label label-info">Кол-во потоков</label>
+        </h3>
+        <input type="text" class="form-control" id="workers" placeholder="Кол-во потоков">
+      </div>
+      <div class="form-group">
+        <h3>
+          <label for="exampleInputFile" class="label label-info">Выберите изображение</label>
+        </h3>
+        <input type="file" id="exampleInputFile">
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="button" class="btn btn-primary" onclick="draw('my_canvas')" value="Нарисовать" />
+      <h4>
+        <label for="customParameters" class="label label-info">Использовать выборочные настройки</label>
+      </h4>
+      <input id="customParameters" type="checkbox">
+      <h3>
+        <label for="mobileParameters" class="label label-info">Я С МОБИЛЬНОГО (MAX WORKERS 30)</label>
+        <input id="mobileParameters" type="checkbox">
+      </h3>
+    </div>
+  </form>
+
+  <div class="container__canvas clearfix">
+    <canvas id="my_canvas"  width="350" height="300"></canvas>
+    <span class="label label-success js-total-time canvas__time">Progress</span>
+    <canvas id="your_canvas" width="350" height="300"> </canvas>
+  </div>
+
+  <div id="load_info" class="clearfix"></div>
+  <div id="chart" class="chart"></div>
+  <div class="jumbotron js-info-block">
+    <p class="label-default">Распараллеливание работы с getImageData() на примере создания асинхронно работающего сложного фильтра размывания изображений — blur, c помощью объектов Web Worker.Спецификация объектов Web Worker определяет API для создания фоновых скриптов в веб-приложениях. Эти объекты позволяют запускать долговременные скрипты для выполнения задач, требующих большого объема вычислений, не прибегая к блокировке интерфейса пользователя или других скриптов, управляющих взаимодействием пользователя с системой.
+    Поддерживается всеми современными браузерами <a href="http://caniuse.com/webworkers">http://caniuse.com/webworkers</a>
+    </p>
+  </div>
+</div>
+
+<script src="jquery-1.11.0.js"></script>
+<script src="main.js"></script>
+<script src="highcharts.js"></script>
+<script src="exporting.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    margin: 0 auto;
+    width: 940px;
+    text-align: center;
+  }
+  .form__parameters{
+    display: none;
+    height: 0;
+    -webkit-transition: height .6s ease;
+    transition: height.6s ease;
+  }
+  .container__canvas{
+    padding: 5px;
+    display: none;
+    margin-bottom: 20px;
+    box-shadow: 0 0 40px #ccc;
+  }
+  #my_canvas{
+    float: left;
+  }
+  #your_canvas{
+    float: right;
+  }
+  .canvas__time{
+    display: inline-block;
+    margin-top: 15%;
+    font-size: 17px;
+  }
+  .progress{
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    height: 100px;
+    width: 35px;
+    -webkit-transition: width .6s ease;
+    transition: height.6s ease;
+  }
+  .progress-bar{
+    position: absolute;
+    width: 100%;
+    border-radius: 4px;
+    bottom: 0;
+  }
+  #load_info{
+    display: inline-block;
+    margin: 0 auto;
+  }
+  form{
+    display: inline-block;
+  }
+  .chart{
+    min-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 0 40px #ccc;
+  }
+  h4{
+    display: inline-block;
+  }
