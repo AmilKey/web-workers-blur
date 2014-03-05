@@ -229,7 +229,7 @@ chart = function() {
 scroll_to_bottom = function(speed) {
   var height;
   height = $("body").height();
-  $("html,body").animate({
+  $("html").animate({
     scrollTop: height
   }, speed);
 };

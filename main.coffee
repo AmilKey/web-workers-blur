@@ -226,7 +226,7 @@ chart = ->
 #прокрутка вниз страницы
 scroll_to_bottom = (speed) ->
   height = $("body").height()
-  $("html,body").animate
+  $("html").animate
     scrollTop: height
   , speed
   return
