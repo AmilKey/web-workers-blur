@@ -25,7 +25,7 @@ $("#exampleInputFile").change (e) ->
   reader.readAsDataURL file
   return
 
-img.src = 'test.jpg'
+img.src = 'img/test.jpg'
 
 ###*
   наборы тестов
@@ -133,7 +133,7 @@ draw = (canvas_name) ->
 
     console.time "DEBUG:: TIME create Worker LOOP"
     for i in [0...num_workers]
-      workers[i] = new Worker("worker.js") # Создаём новый worker
+      workers[i] = new Worker("js/worker.js") # Создаём новый worker
       workers[i].onmessage = callback
     console.timeEnd "DEBUG:: TIME create Worker LOOP"
 
@@ -226,7 +226,7 @@ chart = ->
 #прокрутка вниз страницы
 scroll_to_bottom = (speed) ->
   height = $("body").height()
-  $("html").animate
+  $("body").animate
     scrollTop: height
   , speed
   return
