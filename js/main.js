@@ -90,6 +90,7 @@ draw = function(canvas_name) {
       imagedata = event.data.imagedata;
       number = event.data.number;
       progress = event.data.progress;
+      console.log("status" + number);
       if (status === "complite") {
         --pending_workers;
         if (!pending_workers) {
@@ -112,6 +113,7 @@ draw = function(canvas_name) {
         $(".load_info_" + number).height(progress + '%');
         $(".load_info_" + number).text(progress + '%');
       }
+      console.log("status" + number);
     };
     workers = [];
     num_workers = pending_workers = $("#workers").val() || count_workers[number_test].toString();

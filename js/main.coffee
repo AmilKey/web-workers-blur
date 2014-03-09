@@ -82,7 +82,7 @@ draw = (canvas_name) ->
       imagedata = event.data.imagedata
       number = event.data.number
       progress = event.data.progress
-
+      console.log "status" + number
       #рисуем часть изображения
       if status is "complite" # Если фильтр выполнил работу
         #считаем кол-во колбеков
@@ -109,6 +109,7 @@ draw = (canvas_name) ->
         # Если фильтр не завершил работу, то показываем текущий прогресс
         $(".load_info_" + number).height progress + '%'
         $(".load_info_" + number).text progress + '%'
+      console.log "status" + number
       return
 
     workers = []
